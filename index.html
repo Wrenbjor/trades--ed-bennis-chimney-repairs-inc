@@ -378,9 +378,9 @@ footer a:hover{text-decoration:underline}
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (function(){
-  var city='Oreland',state='PA';
-  if(!city)return;
-  var q=encodeURIComponent(city+(state?', '+state:'')+', USA');
+  var geo='Oreland, PA';
+  if(!geo)return;
+  var q=encodeURIComponent(geo+', USA');
   fetch('https://nominatim.openstreetmap.org/search?q='+q+'&format=json&limit=1')
     .then(function(r){return r.json();})
     .then(function(d){
